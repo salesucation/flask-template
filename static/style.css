@@ -2,6 +2,7 @@
     --f7-bars-shadow-bottom-image: none;
     --f7-searchbar-input-padding-horizontal: 24px;
     --f7-navbar-margin: 12px;
+    --footer-height: 3em;
 }
 
 .avatar {
@@ -49,8 +50,13 @@
     bottom: 10px;
 }
 
-.wp-site-blocks {
-    height: 100%;
+.page-content {
+    height: auto;
+    min-height: calc(100vh - var(--footer-height));
+}
+
+footer {
+    height: var(--footer-height);
 }
 
 footer p{
