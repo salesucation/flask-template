@@ -1,14 +1,16 @@
-<div class="panel panel-left panel-cover">
+<header>
+  <div class="panel panel-left panel-cover">
     <div class="page page-accounts">
-        <div class="page-content">
-            <div class="block-title">{% block title %}{% endblock %}</div>
-            <div class="list no-chevron">
-                {% include 'layout/nav.html' %}
-            </div>
+      <div class="page-content">
+        <div class="block-title">{% block title %}{% endblock %}</div>
+        <div class="list no-chevron">
+          {% include 'layout/nav.html' %}
         </div>
+      </div>
     </div>
-</div>
-<div class="navbar elevation-6">
+  </div>
+
+  <div class="navbar elevation-6">
     <div class="navbar-bg"></div>
     <div class="navbar-inner">
       <div class="left">
@@ -31,3 +33,4 @@
       </div>
     </div>
   </div>
+</header>
