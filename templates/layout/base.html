@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    {% block head %}
-    <link rel="stylesheet" href="static/style.css" />
-    <title>{% block title %}{% endblock %}</title>
-    {% endblock %}
-</head>
+{% include 'layout/head.html' %}
+
 <body>
-    <header>
-        {% block header %}
-        {% endblock %}
-    </header>
-    <section id="content">{% block content %}{% endblock %}</section>
-    <footer>
-        {% block footer %}
-        {% endblock %}
-    </footer>
-    <script src="static/main.js"></script>
+    {% include 'layout/header.html' %}
+    {% block content %}{% endblock %}
+    {% include 'layout/footer.html' %}
+    {% include 'layout/script.html' %}
 </body>
+
 </html>
