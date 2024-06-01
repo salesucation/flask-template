@@ -1,8 +1,86 @@
 {% extends "layout/base.html" %}
 {% block title %}Index{% endblock %}
 {% block content %}
-    <h1>Index</h1>
-    <p class="important">
-      Welcome to my awesome homepage.
-    </p>
+<!-- hide-on-search element -->
+<div class="block block-title searchbar-hide-on-search">
+  <p>INBOX</p>
+</div>
+<!-- search target list -->
+<div class="list list-email media-list">
+  <ul>
+    <li>
+      <label class="item-checkbox item-content">
+        <input type="checkbox" name="demo-media-checkbox" value="1">
+        <i class="icon icon-checkbox"></i>
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">Facebook</div>
+            <div class="item-after">17:14</div>
+          </div>
+          <div class="item-subtitle">New messages from John Doe</div>
+          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut
+            turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet,
+            pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+            laoreet, commodo augue id, pulvinar lacus.</div>
+        </div>
+      </label>
+    </li>
+    <li>
+      <label class="item-checkbox item-content">
+        <input type="checkbox" name="demo-media-checkbox" value="2">
+        <i class="icon icon-checkbox"></i>
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">John Doe (via Twitter)</div>
+            <div class="item-after">17:11</div>
+          </div>
+          <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
+          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut
+            turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet,
+            pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+            laoreet, commodo augue id, pulvinar lacus.</div>
+        </div>
+      </label>
+    </li>
+    <li>
+      <label class="item-checkbox item-content">
+        <input type="checkbox" name="demo-media-checkbox" value="3">
+        <i class="icon icon-checkbox"></i>
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">Facebook</div>
+            <div class="item-after">16:48</div>
+          </div>
+          <div class="item-subtitle">New messages from John Doe</div>
+          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut
+            turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet,
+            pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+            laoreet, commodo augue id, pulvinar lacus.</div>
+        </div>
+      </label>
+    </li>
+    <li>
+      <label class="item-checkbox item-content">
+        <input type="checkbox" name="demo-media-checkbox" value="4">
+        <i class="icon icon-checkbox"></i>
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">John Doe (via Twitter)</div>
+            <div class="item-after">15:32</div>
+          </div>
+          <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
+          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut
+            turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet,
+            pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+            laoreet, commodo augue id, pulvinar lacus.</div>
+        </div>
+      </label>
+    </li>
+  </ul>
+</div>
+<!-- Nothing found message -->
+<div class="block searchbar-not-found">
+  <div class="block-inner">Nothing found</div>
+</div>
+
 {% endblock %}
