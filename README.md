@@ -1,5 +1,5 @@
 # salesucation.github.io
-## serverless flask template for sales engineers (and the website)
+## serverless flask template for sales engineers (and the [website](https://salesucation.com))
 
 TLDR;
 
