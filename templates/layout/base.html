@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include 'layout/head.html' %}
+
+<head>
+        {% include 'layout/head.html' %}
+        <title>{% block title %}{% endblock %}</title>
+</head>
 
 <body id="app">
         {% include 'layout/header.html' %}

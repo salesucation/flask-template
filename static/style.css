@@ -51,6 +51,10 @@
     bottom: 10px;
 }
 
+body{
+    display: none; /* displays when ready */
+}
+
 body.framework7-root {
     display: flex;
     flex-direction: column;
