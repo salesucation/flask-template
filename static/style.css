@@ -2,6 +2,7 @@
     --f7-bars-shadow-bottom-image: none;
     --f7-searchbar-input-padding-horizontal: 24px;
     --f7-navbar-margin: 12px;
+    --header-height: 112px;
     --footer-height: 3em;
 }
 
@@ -50,15 +51,15 @@
     bottom: 10px;
 }
 
-.page {
+body.framework7-root {
     display: flex;
     flex-direction: column;
+    height:auto;
 }
 
-.page-content {
+main {
     overflow-y: auto;
-    height: fit-content;
-    min-height: calc(100vh - var(--footer-height));
+    min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 
 header{

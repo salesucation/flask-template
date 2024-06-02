@@ -2,23 +2,11 @@
 <html lang="en">
 {% include 'layout/head.html' %}
 
-<body>
-    <div id="app">
-        <div class="view view-main view-init">
-            <div class="page page-email-list">
-      
+<body id="app">
         {% include 'layout/header.html' %}
-        <div class="page-content">
-         <!-- Searchbar backdrop -->
-         <div class="searchbar-backdrop"></div>
-
-        {% block content %}{% endblock %}
-        </div>
+        <main>{% block content %}{% endblock %}</main>
         {% include 'layout/footer.html' %}
-        </div>
-        </div>
         {% include 'layout/script.html' %}
-    </div>
 </body>
 
 </html>
