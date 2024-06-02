@@ -62,6 +62,8 @@ body.framework7-root {
 }
 
 main {
+    width:98%;
+    margin: 0 auto;
     overflow-y: auto;
     min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
