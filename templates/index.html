@@ -1,8 +1,11 @@
 {% extends "layout/base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
+<section>
 <h1>{{ page.title }}</h1>
 {{ page }}
+</section>
+<section>
 <h2>Articles</h2>
 <div class="list media-list">
   <ul>
@@ -22,4 +25,5 @@
     {%- endfor -%}
   </ul>
 </div>
+</section>
 {% endblock %}

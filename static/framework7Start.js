@@ -22,4 +22,17 @@ window.addEventListener('load', function () {
             }
         }
     });
+    //
+    if(!this.localStorage.getItem("cookies_accepted")){
+        this.localStorage.setItem("cookies_accepted", new Date().toLocaleString());
+        const cookieMessage = app.sheet.create(
+            {
+                el: '.cookie-message'
+            });
+        $(".cookie-message .sheet-close").on("click", ()=>{
+            cookieMessage.close();
+        })
+        cookieMessage.open();
+    }
+
 });
