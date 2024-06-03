@@ -1,7 +1,6 @@
 :root {
     --f7-bars-shadow-bottom-image: none;
     --f7-searchbar-input-padding-horizontal: 24px;
-    --f7-list-margin-vertical: 0;
     --f7-navbar-margin: 12px;
     --header-height: 112px;
     --footer-height: 3em;
@@ -71,6 +70,10 @@ main {
 
 main section{
     margin-bottom: 2.5em;
+}
+
+main section .list{
+    margin: .5em 0;
 }
 
 main section h2{
