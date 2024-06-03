@@ -1,19 +1,21 @@
-from flask_frozen import Freezer
-from flask import url_for, render_template_string
-from app import app
-from flask_flatpages import FlatPages
+from app import app, pages
 import os
+import shutil
 
-freezer = Freezer(app)
-pages = FlatPages(app)
+client = app.test_client();
 
-if __name__ == '__main__':
-    with app.app_context():
-    #freezer.freeze()
-        for page in pages:
-            template = page.meta.get('template', 'article.html')
-            sPage = render_template_string(template, page=page)
-            os.makedirs(f"{os.getcwd()}/build/{page.path}")
-            f = open(f"{os.getcwd()}/build/{page.path}/index.html", "a")
-            f.write(sPage)
-            f.close()
+def load(path):
+    res = client.get(path)
+    if path != "/":
+        os.makedirs(f"{os.getcwd()}/build/{path}")
+        f = open(f"{os.getcwd()}/build/{path}/index.html", "wb")
+    else:
+        f = open(f"{os.getcwd()}/build/index.html", "wb")
+    f.write(res.data)  
+    f.close()
+
+shutil.rmtree(f"{os.getcwd()}/build")
+shutil.copytree(f"{os.getcwd()}/static", f"{os.getcwd()}/build/static")
+for page in pages:
+    load(page.path)
+load("/")
