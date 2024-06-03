@@ -14,7 +14,8 @@ def load(path):
     f.write(res.data)  
     f.close()
 
-shutil.rmtree(f"{os.getcwd()}/build")
+if os.path.exists(f"{os.getcwd()}/build"):
+    shutil.rmtree(f"{os.getcwd()}/build")
 shutil.copytree(f"{os.getcwd()}/static", f"{os.getcwd()}/build/static")
 for page in pages:
     load(page.path)
