@@ -1,8 +1,9 @@
 window.addEventListener('load', function () {
+    const el = '#app';
     var $ = Dom7;
 
     const app = new Framework7({
-        el: '#app',
+        el,
         theme: 'md',
         darkMode: "auto",
         clicks: {
@@ -33,6 +34,9 @@ window.addEventListener('load', function () {
             cookieMessage.close();
         })
         cookieMessage.open();
+    }
+    if(this.navigator.userAgent.match(/Android/i)){
+        this.document.querySelector(el).classList.add("android");
     }
 
 });
