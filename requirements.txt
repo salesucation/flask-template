@@ -1,3 +1,5 @@
 flask
 Frozen-Flask
 Flask-FlatPages
+pandas
+pygal
