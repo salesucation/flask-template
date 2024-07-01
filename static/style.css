@@ -103,3 +103,17 @@ footer p {
 .not-found-block {
     padding: 1em;
 }
+
+.dark g text, 
+.dark g text.title, 
+.dark g .legends .legend text
+{
+    fill: white;
+}
+
+.dark g .line,
+.dark g .axis .major.line,
+.dark g .axis .guide.line
+{
+    stroke: white;
+}
