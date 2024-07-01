@@ -1,0 +1,29 @@
+{% extends "layout/base.fr.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block content %}
+<section>
+<h1>{{ page.title }}</h1>
+{{ page }}
+</section>
+<section>
+<h2>Articles</h2>
+<div class="list media-list">
+  <ul>
+    {%- for article in articles %}
+    <li>
+      <a href="/{{ article.path }}">
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">{{ article.title }}</div>
+            <div class="item-after">{{ article.published }}</div>
+          </div>
+          <div class="item-subtitle">By: {{ article.author }}</div>
+          <div class="item-text">{{ article }}</div>
+        </div>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+<header>
+  <div class="panel panel-left panel-cover">
+    <div class="page page-accounts">
+      <div class="page-content">
+        <div class="block-title">{% block title %}{% endblock %}</div>
+        <div class="list no-chevron">
+          {% include 'layout/nav.fr.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar elevation-6">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <div class="left">
+        <a class="link panel-open icon-only" data-panel="left">
+          <i class="icon f7-icons">bars</i>
+        </a>
+      </div>
+      <div class="title">
+        <!-- Searchbar with auto init -->
+        <form class="searchbar">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="Recherche">
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button if-not-aurora">Annuler</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
