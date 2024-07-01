@@ -104,6 +104,41 @@ footer p {
     padding: 1em;
 }
 
+/* to make pygal work with dark theme when included as a .svg
+<div class="container" align="left">
+    {{graph_data|safe}}
+</div>
+
+and
+
+    page = pages.get_or_404("status")
+    df = pd.read_csv('https://anvil.works/blog/img/plotting-in-python/uk-election-results.csv')
+
+    custom_style = Style(
+        colors=('#0343df', '#e50000', '#ffff14', '#929591'),
+        font_family='Roboto,Helvetica,Arial,sans-serif',
+        background='transparent',
+        plot_background='transparent',
+        label_font_size=14,
+    )
+
+    c = pygal.Bar(
+        title="UK Election Results",
+        style=custom_style,
+        y_title='Seats',
+        x_label_rotation=270,
+        no_prefix=True
+    )
+    c.add('Conservative', df['conservative'])
+    c.add('Labour', df['labour'])
+    c.add('Liberal', df['liberal'])
+    c.add('Others', df['others'])
+
+    c.x_labels = df['year']
+    graph_data = c.render(is_unicode=True)
+    return render_template("status_page.html", page=page, graph_data=graph_data)
+*/
+
 .dark g text, 
 .dark g text.title, 
 .dark g .legends .legend text
