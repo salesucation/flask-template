@@ -31,6 +31,6 @@ def index():
 
 @app.route('/<path:path>')
 def page(path):
-    page = pages.get_or_404(f"{getLang()}/{path}")
-    template = page.meta.get('template', 'article.html')
+    page = pages.get_or_404(path)
+    template = page.meta.get('template', f'{getLang()}/article.html')
     return render_template(template, page=page)
