@@ -7,7 +7,7 @@ client = app.test_client();
 def load(path):
     res = client.get(path)
     if path.endswith("index"):
-        path = path.replace("/index", "")
+        path = path.replace("index", "")
     try:
         os.makedirs(f"{os.getcwd()}/build/{path}")
     except:

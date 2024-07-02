@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection</title>
+</head>
+<body>
+{{ page }}
+<script>
+    const languages = {{ languages | tojson}};
+    debugger;
+    try{
+        const sLang = navigator.language.substring(0,2);
+        if(languages.includes(sLang)){
+            window.location.replace(sLang);
+        }else{
+            throw new Exception("unsupported language");
+        }
+    }catch{
+        window.location.replace("fr");
+    }
+    
+</script>
+</body>
+</html>
