@@ -6,7 +6,8 @@
 {{ page }}
 </section>
 <section>
-<h2>Articles</h2>
+{% if articles|length %}
+<h2>Des articles</h2>
 <div class="list media-list">
   <ul>
     {%- for article in articles %}
@@ -25,5 +26,6 @@
     {%- endfor -%}
   </ul>
 </div>
+{% endif %}
 </section>
 {% endblock %}
